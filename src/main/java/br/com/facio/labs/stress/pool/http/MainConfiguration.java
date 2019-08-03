@@ -1,18 +1,18 @@
 package br.com.facio.labs.stress.pool.http;
 
-import br.com.facio.labs.stress.pool.http.service.ProductService;
 import org.apache.http.client.HttpClient;
 import org.apache.http.conn.ClientConnectionManager;
+import org.apache.http.conn.params.ConnManagerPNames;
 import org.apache.http.conn.scheme.PlainSocketFactory;
 import org.apache.http.conn.scheme.Scheme;
 import org.apache.http.conn.scheme.SchemeRegistry;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.conn.PoolingClientConnectionManager;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpParams;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.oxm.jaxb.Jaxb2Marshaller;
-import org.springframework.ws.transport.http.HttpComponentsMessageSender;
 
 /**
  *
@@ -44,9 +44,9 @@ public class MainConfiguration {
         SchemeRegistry schemeRegistry = new SchemeRegistry();
         schemeRegistry.register(
                 new Scheme("http", 80, PlainSocketFactory.getSocketFactory()));
-        
+
         ClientConnectionManager cm = new PoolingClientConnectionManager(schemeRegistry);
-        
+
         return cm;
     }
 }

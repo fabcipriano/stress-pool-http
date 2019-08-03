@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="64020956-97ad-4535-815b-ad6c92fdc743" activeEnvironment="Default" name="SoaProductService" resourceRoot="" soapui-version="5.3.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="acec20e1-92b0-4678-a963-78ae0651152f" wsaVersion="NONE" name="ManageProductInformationAppMobileReqCSSOAP" type="wsdl" bindingName="{http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS}ManageProductInformationAppMobileReqCSSOAP" soapVersion="1_1" anonymous="optional" definition="http://10.51.4.138/ManageProductInformation/ps/ManageProductInformationAppMobileReqCS?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://10.51.4.138/ManageProductInformation/ps/ManageProductInformationAppMobileReqCS?wsdl"><con:part><con:url>http://10.51.4.138/ManageProductInformation/ps/ManageProductInformationAppMobileReqCS?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ManageProductInformationAppMobileReqCS" targetNamespace="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <plnk:partnerLinkType name="ManageProductInformationAppMobileReqCS">
+    <plnk:role name="ManageProductInformationAppMobileReqCS" portType="tns:ManageProductInformationAppMobileReqCS"/>
+  </plnk:partnerLinkType>
+  <wsdl:types>
+    <xsd:schema>
+      <xsd:import namespace="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS" schemaLocation="http://osbhom.network.ctbc:80/ManageProductInformation/ps/ManageProductInformationAppMobileReqCS?SCHEMA%2FManageProductInformation%2Fxsd%2FManageProductInformationAppMobileReqCS"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="QueryAssetsRequestMessage">
+    <wsdl:part element="tns:QueryAssetsRequestMessage" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="QueryAssetsResponseMessage">
+    <wsdl:part element="tns:QueryAssetsResponseMessage" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="QueryValueAddedServicesRequestMessage">
+    <wsdl:part element="tns:QueryValueAddedServicesRequestMessage" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="QueryValueAddedServicesResponseMessage">
+    <wsdl:part element="tns:QueryValueAddedServicesResponseMessage" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="QueryAssetDetailsRequestMessage">
+    <wsdl:part element="tns:QueryAssetDetailsRequestMessage" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="QueryAssetDetailsResponseMessage">
+    <wsdl:part element="tns:QueryAssetDetailsResponseMessage" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="QueryProductForMigrationRequestMessage">
+    <wsdl:part element="tns:QueryProductForMigrationRequestMessage" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="QueryProductForMigrationResponseMessage">
+    <wsdl:part element="tns:QueryProductForMigrationResponseMessage" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ValidateChangeOfAddressRequestMessage">
+    <wsdl:part element="tns:ValidateChangeOfAddressRequestMessage" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ValidateChangeOfAddressResponseMessage">
+    <wsdl:part element="tns:ValidateChangeOfAddressResponseMessage" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="QueryAssetsInSameAddressRequestMessage">
+    <wsdl:part element="tns:QueryAssetsInSameAddressRequestMessage" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="QueryAssetsInSameAddressResponseMessage">
+    <wsdl:part element="tns:QueryAssetsInSameAddressResponseMessage" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="ManageProductInformationAppMobileReqCS">
+    <wsdl:operation name="queryAssets">
+      <wsdl:input message="tns:QueryAssetsRequestMessage"/>
+      <wsdl:output message="tns:QueryAssetsResponseMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="queryValueAddedServices">
+      <wsdl:input message="tns:QueryValueAddedServicesRequestMessage"/>
+      <wsdl:output message="tns:QueryValueAddedServicesResponseMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="queryAssetDetails">
+      <wsdl:input message="tns:QueryAssetDetailsRequestMessage"/>
+      <wsdl:output message="tns:QueryAssetDetailsResponseMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="queryProductForMigration">
+      <wsdl:input message="tns:QueryProductForMigrationRequestMessage"/>
+      <wsdl:output message="tns:QueryProductForMigrationResponseMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="validateChangeOfAddress">
+      <wsdl:input message="tns:ValidateChangeOfAddressRequestMessage"/>
+      <wsdl:output message="tns:ValidateChangeOfAddressResponseMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="queryAssetsInSameAddress">
+      <wsdl:input message="tns:QueryAssetsInSameAddressRequestMessage"/>
+      <wsdl:output message="tns:QueryAssetsInSameAddressResponseMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ManageProductInformationAppMobileReqCSSOAP" type="tns:ManageProductInformationAppMobileReqCS">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="queryAssets">
+      <soap:operation soapAction="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS/queryAssets"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryValueAddedServices">
+      <soap:operation soapAction="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS/queryValueAddedServices"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAssetDetails">
+      <soap:operation soapAction="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS/queryAssetDetails"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryProductForMigration">
+      <soap:operation soapAction="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS/queryProductForMigration"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateChangeOfAddress">
+      <soap:operation soapAction="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS/validateChangeOfAddress"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAssetsInSameAddress">
+      <soap:operation soapAction="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS/queryAssetsInSameAddress"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ManageProductInformationAppMobileReqCS">
+    <wsdl:port binding="tns:ManageProductInformationAppMobileReqCSSOAP" name="ManageProductInformationAppMobileReqCSSOAP">
+      <soap:address location="http://osbhom.network.ctbc:80/ManageProductInformation/ps/ManageProductInformationAppMobileReqCS"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://osbhom.network.ctbc:80/ManageProductInformation/ps/ManageProductInformationAppMobileReqCS?SCHEMA%2FManageProductInformation%2Fxsd%2FManageProductInformationAppMobileReqCS</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS" xmlns:tns="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="QueryAssetsRequestMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="documentNumber" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="targetCRM" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="option" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryAssetsResponseMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Asset" type="tns:Asset" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="ServiceState" type="tns:ServiceState" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryValueAddedServicesRequestMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="agreementID" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="townCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="destinationSystem" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryValueAddedServicesResponseMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ValueAddedService" type="tns:ValueAddedService" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="ServiceState" type="tns:ServiceState" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryAssetDetailsRequestMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="productId" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="agreementId" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="serviceId" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="system" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryAssetDetailsResponseMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Asset" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:complexContent>
+              <xs:extension base="tns:Asset">
+                <xs:sequence>
+                  <xs:element name="AssetDetails" type="tns:AssetDetails" minOccurs="1" maxOccurs="1"/>
+                </xs:sequence>
+              </xs:extension>
+            </xs:complexContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ServiceState" type="tns:ServiceState" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryProductForMigrationRequestMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="phoneNumber" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="type" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryProductForMigrationResponseMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="region" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="locality" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="Product" type="tns:Product" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="ServiceState" type="tns:ServiceState" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Asset">
+    <xs:sequence>
+      <xs:element name="productId" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="agreementId" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="contractNumber" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="agreementDocumentCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="accountId" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="CNLAcronym" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="CNLCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="productName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="serviceId" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="lineOfBusiness" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="status" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="paymentMode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="system" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="circuit" type="xs:string" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AssetDetails">
+    <xs:sequence>
+      <xs:element name="billingAccountNumber" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="billingDueDay" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="cityCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="city" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="billingSystem" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="activationDate" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="disconnectDate" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="directDebit" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="linkedCNPJ" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ProductPromotion" type="tns:ProductPromotion" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="partiallyBlocked" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ComponentServices" type="tns:ComponentServices" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProductPromotion">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ServiceState">
+    <xs:sequence>
+      <xs:element name="stateCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="errorCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="errorDesc" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ValueAddedService">
+    <xs:sequence>
+      <xs:element name="serviceId" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="serviceName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="serviceActivationDate" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="system" type="xs:string" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Product">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="RelatedProduct" type="tns:RelatedProduct" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RelatedProduct">
+    <xs:sequence>
+      <xs:element name="phoneNumber" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidateChangeOfAddressRequestMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="agreementId" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="protocolNumber" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateChangeOfAddressResponseMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ServiceState" type="tns:ServiceState" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryAssetsInSameAddressRequestMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="agreementId" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="contractType" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryAssetsInSameAddressResponseMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="AssetsOrAgreements" type="tns:AssetsOrAgreements" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="ServiceState" type="tns:ServiceState" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="AssetsOrAgreements">
+    <xs:sequence>
+      <xs:element name="AssetOrAgreement" type="tns:AssetOrAgreement" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="Address" type="tns:Address" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AssetOrAgreement">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="lineOfBusiness" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="identifier" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="packageId" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Address">
+    <xs:sequence>
+      <xs:element name="Street" type="tns:Street" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="City" type="tns:City" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="State" type="tns:State" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Country" type="tns:Country" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Reference" type="tns:Reference" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="AddressType" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Street">
+    <xs:sequence>
+      <xs:element name="postcode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="StreetName" type="tns:StreetName" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="streetNrFirst" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Complement" type="tns:Complement" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="Neighbourhood" type="tns:Neighbourhood" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="StreetName">
+    <xs:sequence>
+      <xs:element name="nametType" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Complement">
+    <xs:sequence>
+      <xs:element name="type" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Neighbourhood">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="City">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Locality" type="tns:Locality" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Locality">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="State">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="code" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Country">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Reference">
+    <xs:sequence>
+      <xs:element name="fullAddress" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ComponentServices">
+    <xs:sequence>
+      <xs:element name="ComponentService" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ComponentService">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://osbhom.network.ctbc:80/ManageProductInformation/ps/ManageProductInformationAppMobileReqCS</con:endpoint></con:endpoints><con:operation id="b220ad8e-878c-4eae-9dce-24c83e4aac84" isOneWay="false" action="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS/queryAssetDetails" name="queryAssetDetails" bindingOperationName="queryAssetDetails" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f24fa4d1-b6ca-4e50-9385-db432f4acf52" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://osbhom.network.ctbc:80/ManageProductInformation/ps/ManageProductInformationAppMobileReqCS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:man="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <man:QueryAssetDetailsRequestMessage>
+         <!--Optional:-->
+         <man:productId>?</man:productId>
+         <!--Optional:-->
+         <man:agreementId>?</man:agreementId>
+         <!--Optional:-->
+         <man:serviceId>?</man:serviceId>
+         <man:system>?</man:system>
+      </man:QueryAssetDetailsRequestMessage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS/queryAssetDetails"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="471cf28c-3532-4ab2-a905-28f61d106c3e" isOneWay="false" action="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS/queryAssets" name="queryAssets" bindingOperationName="queryAssets" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="75aa4bfc-77e2-40a4-85d5-1af79f07326c" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://lntb-cel14323:8080/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:man="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <man:QueryAssetsRequestMessage>
+         <man:documentNumber>02957535602</man:documentNumber>
+         <man:targetCRM>ALGAR CRM</man:targetCRM>
+         <man:option>2</man:option>
+      </man:QueryAssetsRequestMessage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS/queryAssets"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="73ece4df-418f-4386-998d-096eca53e38d" isOneWay="false" action="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS/queryAssetsInSameAddress" name="queryAssetsInSameAddress" bindingOperationName="queryAssetsInSameAddress" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3cdf94b9-593d-44c0-9a09-b1e4b9f9125c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://osbhom.network.ctbc:80/ManageProductInformation/ps/ManageProductInformationAppMobileReqCS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:man="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <man:QueryAssetsInSameAddressRequestMessage>
+         <man:agreementId>?</man:agreementId>
+         <man:contractType>?</man:contractType>
+      </man:QueryAssetsInSameAddressRequestMessage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS/queryAssetsInSameAddress"/></con:call></con:operation><con:operation id="4d3e20fe-1b5c-4cff-829d-eb394c0a4a77" isOneWay="false" action="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS/queryProductForMigration" name="queryProductForMigration" bindingOperationName="queryProductForMigration" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d81760f8-9411-4673-8660-ff1977167569" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://osbhom.network.ctbc:80/ManageProductInformation/ps/ManageProductInformationAppMobileReqCS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:man="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <man:QueryProductForMigrationRequestMessage>
+         <man:phoneNumber>?</man:phoneNumber>
+         <man:type>?</man:type>
+      </man:QueryProductForMigrationRequestMessage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS/queryProductForMigration"/></con:call></con:operation><con:operation id="5c399f0b-c9a2-4662-9d99-efb4421ebe12" isOneWay="false" action="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS/queryValueAddedServices" name="queryValueAddedServices" bindingOperationName="queryValueAddedServices" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d6552238-fd79-415c-919a-a7e08605b2af" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://osbhom.network.ctbc:80/ManageProductInformation/ps/ManageProductInformationAppMobileReqCS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:man="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <man:QueryValueAddedServicesRequestMessage>
+         <man:agreementID>?</man:agreementID>
+         <!--Optional:-->
+         <man:townCode>?</man:townCode>
+         <!--Optional:-->
+         <man:destinationSystem>?</man:destinationSystem>
+      </man:QueryValueAddedServicesRequestMessage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS/queryValueAddedServices"/></con:call></con:operation><con:operation id="e5e116b1-2204-4a15-8489-5950b3349781" isOneWay="false" action="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS/validateChangeOfAddress" name="validateChangeOfAddress" bindingOperationName="validateChangeOfAddress" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e5491169-8e65-4565-b572-5c4d60f7b523" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://osbhom.network.ctbc:80/ManageProductInformation/ps/ManageProductInformationAppMobileReqCS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:man="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <man:ValidateChangeOfAddressRequestMessage>
+         <man:agreementId>?</man:agreementId>
+         <man:protocolNumber>?</man:protocolNumber>
+      </man:ValidateChangeOfAddressRequestMessage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS/validateChangeOfAddress"/></con:call></con:operation></con:interface><con:mockService id="890514c5-d066-4e97-a80d-b0d269883620" port="8080" path="/" host="lntb-cel14323" name="MockService SoaProduct"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="queryAssets" id="905700ca-850a-4b06-aa5f-b58ee051df2c" interface="ManageProductInformationAppMobileReqCSSOAP" operation="queryAssets"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="34876e2a-d19b-4415-b963-56fa53de4cb5" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:man="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <man:QueryAssetsResponseMessage>
+         <man:Asset>
+            <man:productId>123632</man:productId>
+            <man:agreementId>116016790</man:agreementId>
+            <man:CNLAcronym>PMS</man:CNLAcronym>
+            <man:productName>Celular</man:productName>
+            <man:serviceId>A116016790</man:serviceId>
+            <man:lineOfBusiness>TELEFONIA MOVEL</man:lineOfBusiness>
+            <man:status>INATIVO</man:status>
+            <man:paymentMode>POSPAGO</man:paymentMode>
+            <man:system>ALGAR CRM</man:system>
+            <man:circuit>A116016790</man:circuit>
+         </man:Asset>
+         <man:Asset>
+            <man:productId>124900</man:productId>
+            <man:agreementId>116066411</man:agreementId>
+            <man:CNLAcronym>ULA</man:CNLAcronym>
+            <man:productName>Voz Fixa</man:productName>
+            <man:serviceId>03440010060</man:serviceId>
+            <man:lineOfBusiness>TELEFONIA FIXA</man:lineOfBusiness>
+            <man:status>ATIVO</man:status>
+            <man:paymentMode>POSPAGO</man:paymentMode>
+            <man:system>ALGAR CRM</man:system>
+            <man:circuit>03440010060</man:circuit>
+         </man:Asset>
+         <man:Asset>
+            <man:productId>124901</man:productId>
+            <man:agreementId>116066422</man:agreementId>
+            <man:CNLAcronym>ULA</man:CNLAcronym>
+            <man:productName>Banda Larga</man:productName>
+            <man:serviceId>05662603</man:serviceId>
+            <man:lineOfBusiness>COMUNICACAO DADOS</man:lineOfBusiness>
+            <man:status>ATIVO</man:status>
+            <man:paymentMode>POSPAGO</man:paymentMode>
+            <man:system>ALGAR CRM</man:system>
+            <man:circuit>05662603</man:circuit>
+         </man:Asset>
+         <man:Asset>
+            <man:productId>124901</man:productId>
+            <man:agreementId>116066775</man:agreementId>
+            <man:CNLAcronym>ULA</man:CNLAcronym>
+            <man:productName>Banda Larga</man:productName>
+            <man:serviceId>05662651</man:serviceId>
+            <man:lineOfBusiness>COMUNICACAO DADOS</man:lineOfBusiness>
+            <man:status>ATIVO</man:status>
+            <man:paymentMode>POSPAGO</man:paymentMode>
+            <man:system>ALGAR CRM</man:system>
+            <man:circuit>05662651</man:circuit>
+         </man:Asset>
+         <man:Asset>
+            <man:productId>124900</man:productId>
+            <man:agreementId>116066786</man:agreementId>
+            <man:CNLAcronym>ULA</man:CNLAcronym>
+            <man:productName>Voz Fixa</man:productName>
+            <man:serviceId>03440010186</man:serviceId>
+            <man:lineOfBusiness>TELEFONIA FIXA</man:lineOfBusiness>
+            <man:status>ATIVO</man:status>
+            <man:paymentMode>POSPAGO</man:paymentMode>
+            <man:system>ALGAR CRM</man:system>
+            <man:circuit>03440010186</man:circuit>
+         </man:Asset>
+         <man:Asset>
+            <man:productId>124900</man:productId>
+            <man:agreementId>116390295</man:agreementId>
+            <man:CNLAcronym>DVL</man:CNLAcronym>
+            <man:productName>Voz Fixa</man:productName>
+            <man:serviceId>03735121116</man:serviceId>
+            <man:lineOfBusiness>TELEFONIA FIXA</man:lineOfBusiness>
+            <man:status>ATIVO</man:status>
+            <man:paymentMode>POSPAGO</man:paymentMode>
+            <man:system>ALGAR CRM</man:system>
+            <man:circuit>03735121116</man:circuit>
+         </man:Asset>
+         <man:Asset>
+            <man:productId>124902</man:productId>
+            <man:agreementId>116390307</man:agreementId>
+            <man:CNLAcronym>DVL</man:CNLAcronym>
+            <man:productName>Banda Larga Expansão</man:productName>
+            <man:serviceId>06130726</man:serviceId>
+            <man:lineOfBusiness>COMUNICACAO DADOS</man:lineOfBusiness>
+            <man:status>ATIVO</man:status>
+            <man:paymentMode>POSPAGO</man:paymentMode>
+            <man:system>ALGAR CRM</man:system>
+            <man:circuit>06130726</man:circuit>
+         </man:Asset>
+         <man:Asset>
+            <man:productId>13666</man:productId>
+            <man:agreementId>116517602</man:agreementId>
+            <man:CNLAcronym>ULA</man:CNLAcronym>
+            <man:productName>TV</man:productName>
+            <man:serviceId>06144620</man:serviceId>
+            <man:lineOfBusiness>CTBCTV</man:lineOfBusiness>
+            <man:status>ATIVO</man:status>
+            <man:paymentMode>POSPAGO</man:paymentMode>
+            <man:system>ALGAR CRM</man:system>
+            <man:circuit>06144620</man:circuit>
+         </man:Asset>
+         <man:Asset>
+            <man:productId>124901</man:productId>
+            <man:agreementId>116517616</man:agreementId>
+            <man:CNLAcronym>ULA</man:CNLAcronym>
+            <man:productName>Banda Larga</man:productName>
+            <man:serviceId>06144621</man:serviceId>
+            <man:lineOfBusiness>COMUNICACAO DADOS</man:lineOfBusiness>
+            <man:status>ATIVO</man:status>
+            <man:paymentMode>POSPAGO</man:paymentMode>
+            <man:system>ALGAR CRM</man:system>
+            <man:circuit>06144621</man:circuit>
+         </man:Asset>
+         <man:ServiceState>
+            <man:stateCode>0</man:stateCode>
+            <man:errorCode>0</man:errorCode>
+            <man:errorDesc>SUCESSO</man:errorDesc>
+         </man:ServiceState>
+      </man:QueryAssetsResponseMessage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.algartelecom.com.br/SOA/Service/ManageProductInformationAppMobileReqCS/queryAssets"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

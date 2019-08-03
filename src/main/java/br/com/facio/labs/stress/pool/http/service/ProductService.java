@@ -6,6 +6,6 @@ package br.com.facio.labs.stress.pool.http.service;
  */
 public interface ProductService {
 
-    void queryAssets(String id, String target);
+    String queryAssets(String id, String target);
     
 }

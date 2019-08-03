@@ -1,6 +1,5 @@
 package br.com.facio.labs.stress.pool.http;
 
-import br.com.facio.labs.stress.pool.http.service.ProductSOAService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;

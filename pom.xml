@@ -22,10 +22,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.ws</groupId>
-            <artifactId>spring-ws-core</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <exclusions>
@@ -43,7 +39,8 @@
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
-            <version>4.3</version>
+            <!-- upgrade to use Max TTL cofiguration -->
+            <version>4.4</version>
         </dependency>
         
         <!-- 

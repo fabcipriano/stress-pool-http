@@ -1,6 +1,6 @@
 package br.com.facio.labs.stress.pool.http;
 
-import org.apache.http.client.HttpClient;
+import java.util.concurrent.TimeUnit;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.conn.ClientConnectionManager;
 import org.apache.http.conn.scheme.PlainSocketFactory;
@@ -10,6 +10,7 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.conn.PoolingClientConnectionManager;
+import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -33,14 +34,24 @@ public class MainConfiguration {
 
     @Value("${stresspool.http.performance.issue}")
     private boolean performanceIssue;
+    
+    @Value("${stresspool.http.max.conn.per.route}")
+    private int maxConnPerRoute;
 
+    @Value("${stresspool.http.max.conn.total}")
+    private int maxConnTotal;
+
+    @Value("${stresspool.http.max.conn.ttl.inseconds}")
+    private int maxConnTtlInSeconds;
+    
     @Bean
     public CloseableHttpClient httpClient() {
         CloseableHttpClient client = null;
         if (!performanceIssue) {
-            LOG.info("####### Default HTTP, Fixed. Performance OK !!!");
+            LOG.info("------> Default HTTP, Fixed. Performance OK !!!");
             client = newHttpClient();
         } else {
+            LOG.warn("------> Houston We Have a Problem performance problem !!!!!");
             client = oldSchoolHttpClient(client);
         }
 
@@ -55,8 +66,9 @@ public class MainConfiguration {
                 .setSocketTimeout(Integer.parseInt(readTimeout)).build();
         HttpClientBuilder builder = HttpClientBuilder.create()
                 .setDefaultRequestConfig(requestConfig)
-                .setMaxConnTotal(1000)
-                .setMaxConnPerRoute(100);
+                .setConnectionTimeToLive(maxConnTtlInSeconds, TimeUnit.SECONDS)
+                .setMaxConnPerRoute(maxConnPerRoute)
+                .setMaxConnTotal(maxConnTotal);
         client = builder.build();
         return client;
     }
@@ -76,14 +88,6 @@ public class MainConfiguration {
                 new Scheme("http", 80, PlainSocketFactory.getSocketFactory()));
 
         PoolingClientConnectionManager cm = new PoolingClientConnectionManager(schemeRegistry);
-        if (!performanceIssue) {
-            LOG.info("Fixed. Performance OK !!!");
-            cm.setDefaultMaxPerRoute(60);
-            cm.setMaxTotal(600);
-        } else {
-            LOG.warn(" -----> Houston We Have a Problem performance problem !!!!!");
-        }
-
         return cm;
     }
 }

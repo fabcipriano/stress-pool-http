@@ -51,8 +51,8 @@ public class MainConfiguration {
         PoolingClientConnectionManager cm = new PoolingClientConnectionManager(schemeRegistry);
         if (!performanceIssue) {
             LOG.info("Fixed. Performance OK !!!");
-            cm.setDefaultMaxPerRoute(40);
-            cm.setMaxTotal(400);
+            cm.setDefaultMaxPerRoute(60);
+            cm.setMaxTotal(600);
         } else {
             LOG.warn(" -----> Houston We Have a Problem performance problem !!!!!");
         }

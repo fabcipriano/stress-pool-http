@@ -42,7 +42,7 @@
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
             <!-- upgrade to use Max TTL cofiguration -->
-            <version>4.4</version>
+            <version>4.5.13</version>
         </dependency>
         
         <!-- 

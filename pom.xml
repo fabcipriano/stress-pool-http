@@ -19,7 +19,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
         <dropwizard.metrics.version>4.1.0</dropwizard.metrics.version>
-        <lol4j2.version>2.12.0</lol4j2.version>
+        <lol4j2.version>2.16.0</lol4j2.version>
     </properties>
 
     <dependencies>
